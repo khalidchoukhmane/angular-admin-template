@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-material-basics';
+
+  collapsed = signal(false);
+  sidenavWidth = computed(() => this.collapsed() ? '65px' : '250px');
+
 }
