@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContentComponent } from './content.component';
+import { FpAddEditComponent } from './fp-add-edit.component';
 
-describe('ContentComponent', () => {
-  let component: ContentComponent;
-  let fixture: ComponentFixture<ContentComponent>;
+describe('FpAddEditComponent', () => {
+  let component: FpAddEditComponent;
+  let fixture: ComponentFixture<FpAddEditComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ContentComponent]
+      declarations: [FpAddEditComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ContentComponent);
+    fixture = TestBed.createComponent(FpAddEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,31 +1,36 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ContentComponent } from './pages/content/content.component';
-import { AnalyticsComponent } from './pages/analytics/analytics.component';
-import { CommentsComponent } from './pages/comments/comments.component';
+import { FamilleProduitComponent } from './pages/famille-produit/famille-produit.component';
+import { ProduitsComponent } from './pages/produits/produits.component';
+import { BonEntrerComponent } from './pages/bon-entrer/bon-entrer.component';
+import { BonSortieComponent } from './pages/bon-sortie/bon-sortie.component';
+import { FpAddEditComponent } from './pages/famille-produit/fp-add-edit/fp-add-edit.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo : 'dashboard'
+    redirectTo : 'produit'
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent,
+    path: 'famille-produit',
+    component: FamilleProduitComponent,
   },
   {
-    path: 'content',
-    component: ContentComponent,
+    path: 'produit',
+    component: ProduitsComponent,
   },
   {
-    path: 'analytics',
-    component: AnalyticsComponent,
+    path: 'bent',
+    component: BonEntrerComponent,
   },
   {
-    path: 'comments',
-    component: CommentsComponent,
+    path: 'bs',
+    component: BonSortieComponent,
+  },
+  {
+    path: 'fp-add-edit',
+    component: FpAddEditComponent,
   }
 ];
 

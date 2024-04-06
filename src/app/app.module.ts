@@ -12,23 +12,27 @@ import {MatListModule } from '@angular/material/list';
 import { RouterOutlet } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CustomSidenavComponent } from './components/custom-sidenav/custom-sidenav.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ContentComponent } from './pages/content/content.component';
-import { AnalyticsComponent } from './pages/analytics/analytics.component';
-import { CommentsComponent } from './pages/comments/comments.component';
 import { RouterModule } from '@angular/router';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+import { FamilleProduitComponent } from './pages/famille-produit/famille-produit.component';
+import { FpAddEditComponent } from './pages/famille-produit/fp-add-edit/fp-add-edit.component';
+import { ProduitsComponent } from './pages/produits/produits.component';
+import { PAddEditComponent } from './pages/produits/p-add-edit/p-add-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomSidenavComponent,
-    DashboardComponent,
-    ContentComponent,
-    AnalyticsComponent,
-    CommentsComponent
+    FamilleProduitComponent,
+    FpAddEditComponent,
+    ProduitsComponent,
+    PAddEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,11 +43,8 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatListModule,
     RouterOutlet,
-    MatToolbarModule,
-    RouterModule, 
-    MatPaginatorModule,
-    MatCardModule,
-    MatTableModule
+    MatToolbarModule,RouterModule, MatPaginatorModule, MatCardModule, MatTableModule,
+    FlexLayoutModule, MatInputModule, MatFormFieldModule, FormsModule
     ],
   providers: [
     provideClientHydration(),

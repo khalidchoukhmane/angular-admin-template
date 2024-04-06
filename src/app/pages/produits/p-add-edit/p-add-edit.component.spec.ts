@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CommentsComponent } from './comments.component';
+import { PAddEditComponent } from './p-add-edit.component';
 
-describe('CommentsComponent', () => {
-  let component: CommentsComponent;
-  let fixture: ComponentFixture<CommentsComponent>;
+describe('PAddEditComponent', () => {
+  let component: PAddEditComponent;
+  let fixture: ComponentFixture<PAddEditComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CommentsComponent]
+      declarations: [PAddEditComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CommentsComponent);
+    fixture = TestBed.createComponent(PAddEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
