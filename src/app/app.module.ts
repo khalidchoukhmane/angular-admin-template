@@ -24,6 +24,8 @@ import { FamilleProduitComponent } from './pages/famille-produit/famille-produit
 import { FpAddEditComponent } from './pages/famille-produit/fp-add-edit/fp-add-edit.component';
 import { ProduitsComponent } from './pages/produits/produits.component';
 import { PAddEditComponent } from './pages/produits/p-add-edit/p-add-edit.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,7 @@ import { PAddEditComponent } from './pages/produits/p-add-edit/p-add-edit.compon
     MatListModule,
     RouterOutlet,
     MatToolbarModule,RouterModule, MatPaginatorModule, MatCardModule, MatTableModule,
-    FlexLayoutModule, MatInputModule, MatFormFieldModule, FormsModule
+    FlexLayoutModule, MatInputModule, MatFormFieldModule, FormsModule, MatDatepickerModule, MatNativeDateModule
     ],
   providers: [
     provideClientHydration(),
