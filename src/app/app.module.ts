@@ -26,6 +26,8 @@ import { ProduitsComponent } from './pages/produits/produits.component';
 import { PAddEditComponent } from './pages/produits/p-add-edit/p-add-edit.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import {MatDialogModule, MatDialogTitle,MatDialogContent,MatDialogActions,MatDialogClose} from '@angular/material/dialog';
+import { FpDeleteDialogComponent } from './pages/famille-produit/fp-delete-dialog/fp-delete-dialog.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     FpAddEditComponent,
     ProduitsComponent,
     PAddEditComponent,
+    FpDeleteDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatListModule,
     RouterOutlet,
     MatToolbarModule,RouterModule, MatPaginatorModule, MatCardModule, MatTableModule,
-    FlexLayoutModule, MatInputModule, MatFormFieldModule, FormsModule, MatDatepickerModule, MatNativeDateModule
+    FlexLayoutModule, MatInputModule, MatFormFieldModule, FormsModule, MatDatepickerModule, MatNativeDateModule,
+    MatDialogModule, MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose
     ],
   providers: [
     provideClientHydration(),

@@ -6,11 +6,20 @@
     </div>
  </div>  
 
-    <mat-nav-list style="margin-top: 5%;">
+    <!--mat-nav-list style="margin-top: 5%;">
         <a mat-list-item  *ngFor="let item of menuItems()" [routerLink]="item.route" 
         routerLinkActive=""
         #rla="routerLinkActive"
         [activated]="rla.isActive"
+        >
+            <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+            <span matListItemTitle  *ngIf="!sideNavCollapsed()">{{item.label}}</span>
+        </a>
+    </mat-nav-list-->
+
+    <mat-nav-list style="margin-top: 5%;">
+        <a mat-list-item  *ngFor="let item of menuItems()" [routerLink]="item.route" 
+
         >
             <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
             <span matListItemTitle  *ngIf="!sideNavCollapsed()">{{item.label}}</span>
