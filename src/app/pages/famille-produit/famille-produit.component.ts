@@ -1,22 +1,63 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {AfterViewInit, ViewChild} from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { FpDeleteDialogComponent } from './fp-delete-dialog/fp-delete-dialog.component';
+import { HttpClient } from '@angular/common/http';
+import { FamilleProduit } from '../../model/fp.model';
 
 @Component({
   selector: 'app-famille-produit',
   templateUrl: './famille-produit.component.html',
   styleUrl: './famille-produit.component.css'
 })
-export class FamilleProduitComponent implements AfterViewInit{
+export class FamilleProduitComponent implements AfterViewInit, OnInit{
 
   displayedColumns: string[] = ['technical_no', 'fp_name', 'date','operation'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
- 
+  dataSource !: MatTableDataSource<FamilleProduit>;
   
-  constructor(private dialog: MatDialog){}
+  constructor(private dialog: MatDialog, private http: HttpClient){}
+
+  famille_produit : Array<FamilleProduit> = [];
+
+  ngOnInit(): void {
+    this.http.get<Array<FamilleProduit>>('http://localhost:8089/famille-produit')
+    .subscribe({
+      next : data => { 
+        this.dataSource = new MatTableDataSource(data);
+        console.log(this.famille_produit);
+    },
+    error: err => {
+      console.log(err);
+    }
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
